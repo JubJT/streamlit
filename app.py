@@ -1,9 +1,10 @@
-import streamlit as st
-import random
 import json
-from openai import OpenAI
-from dotenv import load_dotenv
 import os
+import random
+
+import streamlit as st
+from dotenv import load_dotenv
+from openai import OpenAI
 
 load_dotenv()
 open_api_key = os.getenv("OPENROUTER_API_KEY")
@@ -44,7 +45,7 @@ if "puzzle" not in st.session_state:
     st.session_state.puzzle = generate_puzzle(st.session_state.theme)
     st.session_state.show_answer = False
 
-st.title("Joke and Riddle")
+st.title("Data Jokes & Riddles")
 
 refresh_clicked, answer_clicked = st.columns(2)
 with refresh_clicked:
