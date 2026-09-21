@@ -26,7 +26,7 @@ def generate_puzzle(theme):
         messages=[
             {
                 "role": "system",
-                "content": "You write funny jokes and clever riddles. Return only valid JSON with exactly these string fields: joke, riddle, answer.",
+                "content": "You write funny jokes and clever riddles. Return only valid JSON with exactly these string fields: joke, riddle, answer. Do not provide riddles or jokes relating to religion, alcohol and ofensive topics",
             },
             {
                 "role": "user",
